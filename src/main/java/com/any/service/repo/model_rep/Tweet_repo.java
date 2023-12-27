@@ -13,48 +13,38 @@ import java.util.List;
 @ApplicationScoped
 public class Tweet_repo implements PanacheRepository<TweetModel> {
     @Transactional
-    public RecentOffensiveDTO resentHateSpeech() {
+    public String resentHateSpeech() {
         Query query = this.getEntityManager().createNativeQuery(
-                "SELECT offensive_type, tweet_content " +
+                "SELECT tweet_content " +
                         "FROM tweet " +
                         "WHERE offensive_type = 'HateSpeech' " +
                         "ORDER BY timestamp DESC " +
                         "LIMIT 1"
         );
 
-        List<Object[]> resultList = query.getResultList();
+        List <String> resultList = query.getResultList();
 
         if (!resultList.isEmpty()) {
-            Object[] row = resultList.get(0);
-            RecentOffensiveDTO recentOffensiveDTO = new RecentOffensiveDTO(
-                    (String) row[0],
-                    (String) row[1]
-            );
-            return recentOffensiveDTO;
+            return (String) resultList.get(0);
         } else {
             return null;
         }
     }
 
     @Transactional
-    public RecentOffensiveDTO resentPornography() {
+    public String resentPornography() {
         Query query = this.getEntityManager().createNativeQuery(
-                "SELECT offensive_type, tweet_content " +
+                "SELECT tweet_content " +
                         "FROM tweet " +
                         "WHERE offensive_type = 'Pornograph' " +
                         "ORDER BY timestamp DESC " +
                         "LIMIT 1"
         );
 
-        List<Object[]> resultList = query.getResultList();
+        List <String> resultList = query.getResultList();
 
         if (!resultList.isEmpty()) {
-            Object[] row = resultList.get(0);
-            RecentOffensiveDTO recentOffensiveDTO = new RecentOffensiveDTO(
-                    (String) row[0],
-                    (String) row[1]
-            );
-            return recentOffensiveDTO;
+            return (String) resultList.get(0);
         } else {
             return null;
         }
@@ -62,32 +52,27 @@ public class Tweet_repo implements PanacheRepository<TweetModel> {
 
 
     @Transactional
-    public RecentOffensiveDTO resentAbusive() {
+    public String resentAbusive() {
         Query query = this.getEntityManager().createNativeQuery(
-                "SELECT offensive_type, tweet_content " +
+                "SELECT tweet_content " +
                         "FROM tweet " +
                         "WHERE offensive_type = 'Abusive' " +
                         "ORDER BY timestamp DESC " +
                         "LIMIT 1"
         );
 
-        List<Object[]> resultList = query.getResultList();
+        List <String> resultList = query.getResultList();
 
         if (!resultList.isEmpty()) {
-            Object[] row = resultList.get(0);
-            RecentOffensiveDTO recentOffensiveDTO = new RecentOffensiveDTO(
-                    (String) row[0],
-                    (String) row[1]
-            );
-            return recentOffensiveDTO;
+            return (String) resultList.get(0);
         } else {
             return null;
         }
     }
 
-
+    @Transactional
     public List<TweetModel> OffensiveChart() {
-        Query query = this.getEntityManager().createNativeQuery("SELECT * FROM tweet");
+        Query query = this.getEntityManager().createNativeQuery("SELECT * FROM tweet ORDER BY timestamp asc;");
         List<TweetModel> resultList = query.getResultList();
         if (!resultList.isEmpty()) {
             return resultList;
@@ -95,9 +80,9 @@ public class Tweet_repo implements PanacheRepository<TweetModel> {
             return null;
         }
     }
-
+    @Transactional
     public List<TopicsDTO> topicClassifications() {
-        Query query = this.getEntityManager().createNativeQuery("SELECT topic, COUNT(*) AS NumberTweets FROM tweet GROUP BY topic ORDER BY NumberTweets DESC LIMIT 6;");
+        Query query = this.getEntityManager().createNativeQuery("SELECT topic, COUNT(*) AS NumberTweets FROM tweet GROUP BY topic ORDER BY NumberTweets asc LIMIT 6;");
         List<TopicsDTO> resultList = query.getResultList();
         if (!resultList.isEmpty()) {
             return resultList;
@@ -106,6 +91,7 @@ public class Tweet_repo implements PanacheRepository<TweetModel> {
         }
     }
 
+    @Transactional
 
     public List<TopicsDTO> recentTopic() {
         Query query = this.getEntityManager().createNativeQuery("SELECT topic, COUNT(*) AS NumberTweets FROM tweet GROUP BY topic ORDER BY NumberTweets DESC LIMIT 6;");

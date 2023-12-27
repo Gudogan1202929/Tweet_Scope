@@ -31,7 +31,7 @@ public class TweetModelController {
         }
     }
 
-    public RecentOffensiveDTO resentHateSpeech() throws Exception {
+    public String resentHateSpeech() throws Exception {
         try {
             return tweetRepo.resentHateSpeech();
         }catch (Exception e){
@@ -40,7 +40,7 @@ public class TweetModelController {
         }
     }
 
-    public RecentOffensiveDTO resentPornography() throws Exception {
+    public String resentPornography() throws Exception {
         try {
             return tweetRepo.resentPornography();
         }catch (Exception e){
@@ -49,7 +49,7 @@ public class TweetModelController {
     }
 
 
-    public RecentOffensiveDTO resentAbusive() throws Exception {
+    public String resentAbusive() throws Exception {
         try {
             return tweetRepo.resentAbusive();
         }catch (Exception e){

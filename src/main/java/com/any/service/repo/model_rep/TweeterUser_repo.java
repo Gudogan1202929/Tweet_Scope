@@ -12,8 +12,19 @@ public class TweeterUser_repo implements PanacheRepository<TweetUserModel> {
 
     @Transactional
     public List<TopRegionsDTO> TopRegions() {
-        Query query = this.getEntityManager().createNativeQuery("SELECT region, COUNT(*) AS user_count FROM tweetuser GROUP BY region ORDER BY user_count DESC LIMIT 6;");
+        String sql = "SELECT region, COUNT(DISTINCT tweetuser.id) AS user_count\n" +
+                "FROM tweetuser\n" +
+                "WHERE tweetuser.id IN (\n" +
+                "    SELECT DISTINCT tweet.usermodel_id\n" +
+                "    FROM tweet\n" +
+                "    WHERE tweet.offensive_type != 'none'\n" +
+                ")\n" +
+                "GROUP BY region\n" +
+                "ORDER BY user_count DESC\n" +
+                "LIMIT 6;";
+        Query query = this.getEntityManager().createNativeQuery(sql);
         List<TopRegionsDTO> resultList = query.getResultList();
+
         if (!resultList.isEmpty()) {
             return resultList;
         } else {
