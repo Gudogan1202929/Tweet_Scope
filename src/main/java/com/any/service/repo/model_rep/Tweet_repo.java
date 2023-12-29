@@ -82,7 +82,7 @@ public class Tweet_repo implements PanacheRepository<TweetModel> {
     }
     @Transactional
     public List<TopicsDTO> topicClassifications() {
-        Query query = this.getEntityManager().createNativeQuery("SELECT topic, COUNT(*) AS NumberTweets FROM tweet GROUP BY topic ORDER BY NumberTweets asc LIMIT 6;");
+        Query query = this.getEntityManager().createNativeQuery("SELECT topic, COUNT(*) AS NumberTweets FROM tweet GROUP BY topic ORDER BY NumberTweets asc LIMIT 8;");
         List<TopicsDTO> resultList = query.getResultList();
         if (!resultList.isEmpty()) {
             return resultList;
@@ -94,7 +94,7 @@ public class Tweet_repo implements PanacheRepository<TweetModel> {
     @Transactional
 
     public List<TopicsDTO> recentTopic() {
-        Query query = this.getEntityManager().createNativeQuery("SELECT topic, COUNT(*) AS NumberTweets FROM tweet GROUP BY topic ORDER BY NumberTweets DESC LIMIT 6;");
+        Query query = this.getEntityManager().createNativeQuery("SELECT topic, COUNT(*) AS NumberTweets FROM tweet GROUP BY topic ORDER BY NumberTweets;");
         List<TopicsDTO> resultList = query.getResultList();
         if (!resultList.isEmpty()) {
             return resultList;

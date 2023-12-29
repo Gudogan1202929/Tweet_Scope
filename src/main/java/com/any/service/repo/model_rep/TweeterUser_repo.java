@@ -20,8 +20,8 @@ public class TweeterUser_repo implements PanacheRepository<TweetUserModel> {
                 "    WHERE tweet.offensive_type != 'none'\n" +
                 ")\n" +
                 "GROUP BY region\n" +
-                "ORDER BY user_count DESC\n" +
-                "LIMIT 6;";
+                "ORDER BY user_count DESC;\n";
+
         Query query = this.getEntityManager().createNativeQuery(sql);
         List<TopRegionsDTO> resultList = query.getResultList();
 
@@ -42,7 +42,8 @@ public class TweeterUser_repo implements PanacheRepository<TweetUserModel> {
             "    WHERE tweet.offensive_type != 'none'\n" +
             ")\n" +
             "GROUP BY region\n" +
-            "ORDER BY user_count DESC;";
+            "ORDER BY user_count DESC\n"
+            +"LIMIT 8;";
 
     Query query = this.getEntityManager().createNativeQuery(sql);
         List<TopRegionsDTO> resultList = query.getResultList();
