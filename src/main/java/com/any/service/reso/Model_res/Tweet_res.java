@@ -45,31 +45,9 @@ public class Tweet_res {
     @GET
     @Path(SystemPaths.RESENTHATESPEECH)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response resentHateSpeech() {
+    public Response summaryOffensive() {
         try {
-            return Response.ok(tweetModelController.resentHateSpeech()).build();
-        } catch (Exception e) {
-            return Response.status(Response.Status.NOT_ACCEPTABLE).build();
-        }
-    }
-
-    @GET
-    @Path(SystemPaths.RESNETPORNOGRAPHY)
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response resentPornography() {
-        try {
-            return Response.ok(tweetModelController.resentPornography()).build();
-        } catch (Exception e) {
-            return Response.status(Response.Status.NOT_ACCEPTABLE).build();
-        }
-    }
-
-    @GET
-    @Path(SystemPaths.RESNETABUSIVE)
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response resentAbusive() {
-        try {
-            return Response.ok(tweetModelController.resentAbusive()).build();
+            return Response.ok(tweetModelController.summaryOffensive()).build();
         } catch (Exception e) {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
         }

@@ -20,11 +20,7 @@ public class SystemPaths {
 
     public static final String GLOBALDISTRIBUTION = "/global/distribution";
 
-    public static final String RESENTHATESPEECH = "/resent/hate/speech";
-
-    public static final String  RESNETPORNOGRAPHY = "/resent/pornography";
-
-    public static final String RESNETABUSIVE = "/resent/abusive";
+    public static final String RESENTHATESPEECH = "/summary/offensive";
 
     public static final String OFFENSIVECHART = "/offensive/chart";
 

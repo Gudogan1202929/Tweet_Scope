@@ -31,27 +31,9 @@ public class TweetModelController {
         }
     }
 
-    public String resentHateSpeech() throws Exception {
+    public List<TopicsDTO> summaryOffensive() throws Exception {
         try {
-            return tweetRepo.resentHateSpeech();
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-            throw new Exception(SystemConstants.BAD_REQUEST);
-        }
-    }
-
-    public String resentPornography() throws Exception {
-        try {
-            return tweetRepo.resentPornography();
-        }catch (Exception e){
-            throw new Exception(SystemConstants.BAD_REQUEST);
-        }
-    }
-
-
-    public String resentAbusive() throws Exception {
-        try {
-            return tweetRepo.resentAbusive();
+            return tweetRepo.summaryOffensive();
         }catch (Exception e){
             throw new Exception(SystemConstants.BAD_REQUEST);
         }
