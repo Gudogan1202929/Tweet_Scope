@@ -14,7 +14,7 @@ public class Tweet_repo implements PanacheRepository<TweetModel> {
     @Transactional
     public List<TopicsDTO> summaryOffensive() {
         Query query = this.getEntityManager().createNativeQuery(
-                "SELECT offensive_type, COUNT(*) AS NumberTweets FROM tweet WHERE offensive_type <> 'none' GROUP BY offensive_type ORDER BY NumberTweets;"
+                "SELECT offensive_type, COUNT(*) AS NumberTweets FROM tweet WHERE offensive_type <> 'none' GROUP BY offensive_type ORDER BY NumberTweets DESC ;"
         );
         List<TopicsDTO> resultList = query.getResultList();
         if (!resultList.isEmpty()) {
