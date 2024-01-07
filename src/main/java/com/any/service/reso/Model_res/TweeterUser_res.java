@@ -52,7 +52,6 @@ public class TweeterUser_res {
         }
     }
 
-
     @GET
     @Path(SystemPaths.GLOBALDISTRIBUTION)
     @Consumes(MediaType.APPLICATION_JSON)

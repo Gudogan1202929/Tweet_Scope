@@ -11,6 +11,7 @@ import java.util.List;
 
 @ApplicationScoped
 public class Tweet_repo implements PanacheRepository<TweetModel> {
+
     @Transactional
     public List<TopicsDTO> summaryOffensive() {
         Query query = this.getEntityManager().createNativeQuery(
@@ -34,6 +35,7 @@ public class Tweet_repo implements PanacheRepository<TweetModel> {
             return null;
         }
     }
+
     @Transactional
     public List<TopicsDTO> topicClassifications() {
         Query query = this.getEntityManager().createNativeQuery("SELECT topic, COUNT(*) AS NumberTweets FROM tweet GROUP BY topic ORDER BY NumberTweets asc LIMIT 8;");
@@ -46,7 +48,6 @@ public class Tweet_repo implements PanacheRepository<TweetModel> {
     }
 
     @Transactional
-
     public List<TopicsDTO> recentTopic() {
         Query query = this.getEntityManager().createNativeQuery("SELECT topic, COUNT(*) AS NumberTweets FROM tweet GROUP BY topic ORDER BY NumberTweets;");
         List<TopicsDTO> resultList = query.getResultList();
