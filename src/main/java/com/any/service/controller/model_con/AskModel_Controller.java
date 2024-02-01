@@ -9,7 +9,7 @@ public class AskModel_Controller {
 
     private final AskModel_repo askModelRepo = new AskModel_repo();
 
-    public String typeOfAbusive() throws Exception {
+    public String typeOfAbusive(String message) throws Exception {
         try {
             return askModelRepo.typeOfAbusive();
         }catch (Exception e){
@@ -17,7 +17,7 @@ public class AskModel_Controller {
         }
     }
 
-    public String typeOfTopics() throws Exception {
+    public String typeOfTopics(String message) throws Exception {
         try {
             return askModelRepo.typeOfTopics();
         }catch (Exception e){

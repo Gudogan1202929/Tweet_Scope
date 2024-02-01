@@ -18,9 +18,9 @@ public class AskModel_res {
     @Path(SystemPaths.MODEL_ABUSIVE)
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response typeOfAbusive() {
+    public Response typeOfAbusive(String message) {
         try {
-            return Response.ok(askModel_controller.typeOfAbusive()).build();
+            return Response.ok(askModel_controller.typeOfAbusive(message)).build();
         } catch (Exception e) {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
         }
@@ -31,9 +31,9 @@ public class AskModel_res {
     @Path(SystemPaths.MODEL_TOPIC)
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response typeOfTopics() {
+    public Response typeOfTopics(String message){
         try {
-            return Response.ok(askModel_controller.typeOfTopics()).build();
+            return Response.ok(askModel_controller.typeOfTopics(message)).build();
         } catch (Exception e) {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
         }
