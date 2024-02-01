@@ -27,4 +27,8 @@ public class SystemPaths {
     public static final String TOPICCLASSIFICATIONS = "/topic/classifications";
 
     public static final String RECENTTOPIC = "/recent/topic";
+
+    public static final String MODEL = "/model";
+    public static final String MODEL_ABUSIVE = "/abusive";
+    public static final String MODEL_TOPIC = "/topic";
 }
