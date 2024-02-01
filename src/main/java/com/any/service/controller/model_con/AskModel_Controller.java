@@ -11,7 +11,7 @@ public class AskModel_Controller {
 
     public String typeOfAbusive(String message) throws Exception {
         try {
-            return askModelRepo.typeOfAbusive();
+            return askModelRepo.typeOfAbusive(message);
         }catch (Exception e){
             throw new Exception(SystemConstants.BAD_REQUEST);
         }
@@ -19,7 +19,7 @@ public class AskModel_Controller {
 
     public String typeOfTopics(String message) throws Exception {
         try {
-            return askModelRepo.typeOfTopics();
+            return askModelRepo.typeOfTopics(message);
         }catch (Exception e){
             throw new Exception(SystemConstants.BAD_REQUEST);
         }
