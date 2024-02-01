@@ -34,11 +34,9 @@ public class FilterMethods {
             if (authorization != null) {
                 roleOfToken = AnalysisJWT.WhatRole(authorization);
             }
-
             List<Roles_Allowed> listOfRolls = new ArrayList<>();
 
             Roles_Allowed Admin = new Roles_Allowed(SystemConstants.ADMIN);
-            Admin.getPaths().add("customer/rating/retrieve/all");
             Admin.getPaths().add("/");
             listOfRolls.add(Admin);
 
@@ -51,11 +49,13 @@ public class FilterMethods {
                     for (String path : item.getPaths()) {
                         if (requestUri.contains(path)) {
                             isAllowed = true;
+                            System.out.println("allowed");
                             break;
                         }
                     }
                 }
             }
+            System.out.println("isAllowed = " + isAllowed);
             if (!isAllowed) {
                 containerRequestContext.abortWith(Response.status(Response.Status.METHOD_NOT_ALLOWED).build());
             }

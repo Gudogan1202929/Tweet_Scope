@@ -9,6 +9,7 @@ public class AskModel_Controller {
 
     private final AskModel_repo askModelRepo = new AskModel_repo();
 
+
     public String typeOfAbusive(String message) throws Exception {
         try {
             return askModelRepo.typeOfAbusive(message);
