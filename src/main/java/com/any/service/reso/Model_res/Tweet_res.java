@@ -82,6 +82,7 @@ public class Tweet_res {
         try {
             return Response.ok(tweetModelController.recentTopic()).build();
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
         }
     }

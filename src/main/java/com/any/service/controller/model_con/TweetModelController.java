@@ -1,7 +1,6 @@
 package com.any.service.controller.model_con;
 
 import com.any.model.TweetModel;
-import com.any.model.dto.RecentOffensiveDTO;
 import com.any.model.dto.TopicsDTO;
 import com.any.service.repo.model_rep.Tweet_repo;
 import com.any.utils.constant.SystemConstants;
@@ -55,7 +54,7 @@ public class TweetModelController {
         }
     }
 
-    public List<TopicsDTO> recentTopic () throws Exception {
+    public int recentTopic() throws Exception {
         try {
             return tweetRepo.recentTopic();
         }catch (Exception e){

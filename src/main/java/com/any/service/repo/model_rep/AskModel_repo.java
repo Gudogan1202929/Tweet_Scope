@@ -7,11 +7,11 @@ public class AskModel_repo {
 
     //todo
     public String typeOfAbusive(String message) {
-        return "hate";
+        return "Hate Speech";
     }
 
     //todo
     public String typeOfTopics(String message) {
-        return "tech";
+        return "Tech";
     }
 }

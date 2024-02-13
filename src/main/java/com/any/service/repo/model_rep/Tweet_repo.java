@@ -48,13 +48,14 @@ public class Tweet_repo implements PanacheRepository<TweetModel> {
     }
 
     @Transactional
-    public List<TopicsDTO> recentTopic() {
-        Query query = this.getEntityManager().createNativeQuery("SELECT topic, COUNT(*) AS NumberTweets FROM tweet GROUP BY topic ORDER BY NumberTweets;");
-        List<TopicsDTO> resultList = query.getResultList();
-        if (!resultList.isEmpty()) {
-            return resultList;
+    public int recentTopic() {
+        Query query = this.getEntityManager().createNativeQuery("SELECT COUNT(tweet_id) FROM tweet;");
+        Object resultObject = query.getSingleResult();
+        if (resultObject instanceof Number) {
+            Number number = (Number) resultObject;
+            return number.intValue();
         } else {
-            return null;
+            return 0;
         }
     }
 }

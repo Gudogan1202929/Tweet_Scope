@@ -50,6 +50,7 @@ public class FilterMethods {
                         if (requestUri.contains(path)) {
                             isAllowed = true;
                             System.out.println("allowed");
+                            System.out.println(isAllowed);
                             break;
                         }
                     }
