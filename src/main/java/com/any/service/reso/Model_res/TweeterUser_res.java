@@ -44,7 +44,7 @@ public class TweeterUser_res {
     @GET
     @Path(SystemPaths.TOPREGIONS)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response getTopRegions() {
+    public Response getTopRegions(){
         try {
             return Response.ok(tweeterUserController.TopRegions()).build();
         } catch (Exception e) {
@@ -55,7 +55,7 @@ public class TweeterUser_res {
     @GET
     @Path(SystemPaths.GLOBALDISTRIBUTION)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response getGlobalDistributions() {
+    public Response getGlobalDistributions(){
         try {
             return Response.ok(tweeterUserController.globalDistribution()).build();
         } catch (Exception e) {

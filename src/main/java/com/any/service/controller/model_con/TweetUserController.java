@@ -7,6 +7,7 @@ import com.any.service.repo.model_rep.TweeterUser_repo;
 import com.any.utils.constant.SystemConstants;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
 import java.util.List;
 
 @Service
@@ -43,9 +44,11 @@ public class TweetUserController {
 
     public List<TopRegionsDTO> globalDistribution() throws Exception {
         try {
-            return tweetUserRepo.globalDistribution();
+            return (tweetUserRepo.globalDistribution());
         }catch (Exception e){
+            System.out.println(e.getMessage());
             throw new Exception(SystemConstants.BAD_REQUEST);
         }
     }
+
 }
