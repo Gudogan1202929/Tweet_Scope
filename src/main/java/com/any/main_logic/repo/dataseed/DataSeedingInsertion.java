@@ -69,8 +69,9 @@ public class DataSeedingInsertion {
         try{
             Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, tweetOffensive.getTweetId());
-            preparedStatement.setInt(2, tweetOffensive.getOffensiveClass().getValue());
+            int offensiveClass = tweetOffensive.getOffensiveClass().getValue();
+            preparedStatement.setString(1, String.valueOf(tweetOffensive.getTweetId()));
+            preparedStatement.setString(2, String.valueOf(offensiveClass));
             preparedStatement.executeUpdate();
         }catch (Exception e) {
             e.printStackTrace();
@@ -78,16 +79,17 @@ public class DataSeedingInsertion {
     }
 
     public void tweetTopicObj(TweetTopic tweetTopic){
-//        String sql = "INSERT INTO Tweet_Topic (TweetId, topic) VALUES (?, ?)";
-//        try{
-//            Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
-//            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//            preparedStatement.setString(1, String.valueOf(tweetTopic.getTweetId()));
-//            preparedStatement.setString(2, String.valueOf(tweetTopic.getTopic()));
-//            preparedStatement.executeUpdate();
-//        }catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        String sql = "INSERT INTO Tweet_Topic (TweetId, topic) VALUES (?, ?)";
+        try{
+            Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            int topicClass = tweetTopic.getTopic().getValue();
+            preparedStatement.setString(1, String.valueOf(tweetTopic.getTweetId()));
+            preparedStatement.setString(2, String.valueOf(topicClass));
+            preparedStatement.executeUpdate();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void summary(DateOffensive dateOffensive){
