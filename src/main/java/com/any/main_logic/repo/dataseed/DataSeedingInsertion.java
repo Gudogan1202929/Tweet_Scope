@@ -62,6 +62,8 @@ public class DataSeedingInsertion {
 //        }
     }
 
+    ///all above is done !!!!!!!!!!!!!!!!
+
     public void tweetOffensive(TweetOffensive tweetOffensive){
         String sql = "INSERT INTO Tweet_Offensive (TweetId, class) VALUES (?, ?)";
         try{
