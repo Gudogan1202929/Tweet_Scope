@@ -18,19 +18,14 @@ public class Enums {
             this.value = value;
         }
 
-    }
-
-    @Getter
-    public enum Role {
-        ADMIN(0),
-        USER(1);
-
-        private final int value;
-
-        Role(int value) {
-            this.value = value;
+        public static TopicClass fromInt(int value) {
+            for (TopicClass topic : TopicClass.values()) {
+                if (topic.value == value) {
+                    return topic;
+                }
+            }
+            throw new IllegalArgumentException("Invalid integer value for TopicClass: " + value);
         }
-
     }
 
     @Getter
@@ -47,6 +42,15 @@ public class Enums {
 
         public int getValue() {
             return value;
+        }
+
+        public static OffensiveClass fromInt(int value) {
+            for (OffensiveClass offensiveClass : OffensiveClass.values()) {
+                if (offensiveClass.value == value) {
+                    return offensiveClass;
+                }
+            }
+            throw new IllegalArgumentException("Invalid integer value for TopicClass: " + value);
         }
     }
 }
