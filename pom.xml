@@ -20,8 +20,9 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
+                <groupId>com.microsoft.sqlserver</groupId>
+                <artifactId>mssql-jdbc</artifactId>
+                <version>12.4.2.jre11</version>
             </dependency>
             <dependency>
                 <groupId>javax.annotation</groupId>
@@ -48,7 +49,6 @@
             <artifactId>quarkus-rest-client-reactive-jackson</artifactId>
             <version>3.2.4.Final</version>
         </dependency>
-
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-resteasy-reactive</artifactId>
@@ -86,14 +86,15 @@
             <artifactId>quarkus-spring-data-jpa</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-jdbc-postgresql</artifactId>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>12.4.2.jre11</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
+            <version>1.18.22</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>

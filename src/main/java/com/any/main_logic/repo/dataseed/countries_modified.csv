@@ -1,0 +1,251 @@
+Name,Language,Currency,CountryCode,TimeZone,id
+Christmas Island,English,Australian Dollar,UTC+07:00,CX,1
+Eritrea,Tigrinya,Eritrean Nakfa,UTC+03:00,ER,2
+Samoa,Samoan,Tala,UTC+13:00,WS,3
+North Macedonia,Macedonian,Macedonian Denar,UTC+01:00,MK,4
+Djibouti,French,Djiboutian Franc,UTC+03:00,DJ,5
+Jordan,Arabic,Jordanian Dinar,UTC+03:00,JO,6
+Pakistan,Urdu,Pakistani Rupee ,UTC+05:00,PK,7
+French Polynesia ,French, CFP Franc ,UTC-10:00 ,PF ,8
+Ireland,irish,Euro,UTC,IE,9
+Mauritania,Arabic,Mauritanian Ouguiya,UTC,MR,10
+Denmark,Danish,Danish Krone,UTC-04:00,DK,11
+Namibia,English,Namibian Dollar,UTC+01:00,,12
+Ghana,English,Ghanaian Cedi,UTC,GH,13
+South Sudan,English,South Sudanese Pound,UTC+03:00,SS,14
+Slovakia,Slovak,Euro,UTC+01:00,SK,15
+American Samoa,Samoan,US Dollar,UTC-11:00,AS,16
+Moldova,Romanian,Moldovan Leu,UTC+02:00,MD,17
+North Korea,Korean,North Korean Won,UTC+09:00,KP,18
+Macau,Chinese, Pataca,UTC+08:00,MO,19
+Turks and Caicos Islands,English,US Dollar,UTC-04:00,TC,20
+Seychelles,English,Seychellois Rupee,UTC+04:00,SC,21
+Armenia,Armenian,Armenian Dram ,UTC+04:00,AM,22
+Curaçao,Dutch,Netherlands Antillean Guilder,UTC-04:00,CW,23
+Guadeloupe,French,Euro,UTC-04:00,GP,24
+British Indian Ocean Territory,English,US Dollar,UTC+06:00,IO,25
+Equatorial Guinea,Spanish, Central African CFA franc,UTC+01:00,GQ,26
+Syria,Arabic,Syrian Pound,UTC+02:00,SY,27
+Angola,Portuguese,Angolan Kwanza,UTC+01:00,AO,28
+Tajikistan,Tajik,Tajikistani Somoni,UTC+05:00,TJ,29
+Venezuela,Spanish,Venezuelan Bolívar,UTC-04:00,VE,30
+United States Minor Outlying Islands,English,US Dollar,UTC-11:00,UM,31
+Åland Islands,Swedish,Euro,UTC+02:00,AX,32
+Poland,Polish,Polish Złoty,UTC+01:00,PL,33
+Saudi Arabia,Arabic,Saudi Riyal,UTC+03:00,SA,34
+Republic of the Congo,French,Central African CFA franc,UTC+01:00,CG,35
+Bosnia and Herzegovina,Bosnian,Bosnia and Herzegovina Convertible Marka,UTC+01:00,BA,36
+United States Virgin Islands,English,US Dollar,UTC-04:00,VI,37
+New Caledonia,French,CFP Franc,UTC+11:00,NC,38
+San Marino,Italian,Euro,UTC+01:00,SM,39
+Czechia,Czech,Czech Koruna,UTC+01:00,CZ,40
+Guatemala,Spanish,Guatemalan Quetzal,UTC-06:00,GT,41
+South Korea,Korean,South Korean Won,UTC+09:00,KR,42
+Estonia,Estonian,Euro,UTC+02:00,EE,43
+Nepal,Nepali,Nepalese Rupee,UTC+05:45,NP,44
+Kosovo,Albanian,Euro,UTC+01:00,XK,45
+Botswana,English,Botswana Pula,UTC+02:00,BW,46
+Philippines, Filipino/English,Philippine Peso,UTC+08:00,PH,47
+Saint Pierre and Miquelon,French,Euro,UTC-03:00,PM,48
+Iraq,Arabic,Iraqi Dinar,UTC+03:00,IQ,49
+Lebanon,Arabic,Lebanese Pound,UTC+02:00,LB,50
+Burundi,Kirundi,Burundian Franc,UTC+02:00,BI,51
+Mongolia,Mongolian,Tugrik,UTC+08:00,MN,52
+Faroe Islands,Faroese,Faroese Króna,UTC+00:00,FO,53
+Paraguay,Spanish,Paraguayan Guarani,UTC-04:00,PY,54
+Svalbard and Jan Mayen,Norwegian,Norwegian Krone,UTC+01:00,SJ,55
+Tokelau,English,New Zealand Dollar,UTC+13:00,TK,56
+Guernsey,English,British Pound,UTC+00:00,GG,57
+Caribbean Netherlands,Dutch,United States Dollar,UTC-04:00,BQ,58
+Algeria,Arabic,Algerian Dinar,UTC+01:00,DZ,59
+France,French,Euro,UTC+01:00,FR,60
+Netherlands,Dutch,Euro,UTC+01:00,NL,61
+Greenland,Greenlandic,Danish Krone,UTC-03:00,GL,62
+Sint Maarten,Dutch,Netherlands Antillean Guilder,UTC-04:00,SX,63
+Chad,French,Central African CFA franc,UTC+01:00,TD,64
+Finland,Finnish,Euro,UTC+02:00,FI,65
+Panama,Spanish,Panamanian Balboa,UTC-05:00,PA,66
+Palestine,Arabic,Palestinian New Shekel,UTC+02:00,PS,67
+Yemen,Arabic,Yemeni Rial,UTC+03:00,YE,68
+Brazil,Portuguese,Brazilian Real,UTC-03:00,BR,69
+Nigeria,English,Nigerian Naira,UTC+01:00,NG,70
+Palau,English,United States Dollar,UTC+09:00,PW,71
+Japan,Japanese,Japanese Yen,UTC+09:00,JP,72
+Tanzania,Swahili,Tanzanian Shilling,UTC+03:00,TZ,73
+Kazakhstan,Kazakhstani,Tenge,UTC+06:00,KZ,74
+Portugal,Portuguese,Euro,UTC+00:00,PT,75
+South Georgia,English,Pound Sterling,UTC-02:00,GS,76
+Sri Lanka,Sinhala,Sri Lankan Rupee,UTC+05:30,LK,77
+Germany,German,Euro,UTC+01:00,DE,78
+Western Sahara,Arabic,Moroccan Dirham,UTC+00:00,EH,79
+Myanmar,Burmese,Myanmar Kyat,UTC+06:30,MM,80
+Colombia,Spanish,Colombian Peso,UTC-05:00,CO,81
+Peru,Spanish,Peruvian Nuevo Sol,UTC-05:00,PE,82
+Senegal,French,West African CFA franc,UTC,SN,83
+Kyrgyzstan,Kyrgyz,Som,UTC+06:00,KG,84
+China,Chinese,Yuan Renminbi,UTC+08:00,CN,85
+Afghanistan,Dari,Afghan Afghani,UTC+04:30,AF,86
+Turkey,Turkish,Turkish Lira,UTC+03:00,TR,87
+Liberia,English,Liberian Dollar,UTC,LR,88
+South Africa,Afrikaans,South African Rand,UTC+02:00,ZA,89
+Chile,Spanish,Chilean Peso,UTC-06:00,CL,90
+Malta,Maltese,Euro,UTC+01:00,MT,91
+Kiribati,English,Australian Dollar,UTC+12:00,KI,92
+Cape Verde,Portuguese,Cape Verdean Escudo,UTC-01:00,CV,93
+Jersey,English,British Pound,UTC+00:00,JE,94
+Iceland,Icelandic,Icelandic Krona,UTC,IS,95
+Gambia,English,Gambian Dalasi,UTC+00:00,GM,96
+Vanuatu,Bislama,Vanuatu Vatu,UTC+11:00,VU,97
+Uruguay,Spanish,Uruguayan Peso,UTC-03:00,UY,98
+Oman,Arabic,Omani Rial,UTC+04:00,OM,99
+Sudan,Arabic,Sudanese Pound,UTC+03:00,SD,100
+India,Hindi,Indian Rupee,UTC+05:30,IN,101
+Laos,Lao,Kip,UTC+07:00,LA,102
+Aruba,Dutch,Aruban Florin,UTC-04:00,AW,103
+Martinique,French,Euro,UTC-04:00,MQ,104
+Comoros,Comorian,Comorian Franc,UTC+03:00,KM,105
+Spain,Spanish,Euro,UTC+01:00,ES,106
+Antigua and Barbuda,English,East Caribbean Dollar,UTC-04:00,AG,107
+Uzbekistan,Uzbek,Uzbekistani Som,UTC+05:00,UZ,108
+Maldives,Dhivehi,Maldivian Rufiyaa,UTC+05:00,MV,109
+Gibraltar,English,Gibraltar Pound,UTC+01:00,GI,110
+Indonesia,Indonesian,Indonesian Rupiah,UTC+07:00,ID,111
+Pitcairn Islands,English,New Zealand Dollar,UTC-08:00,PN,112
+Vietnam,Vietnamese,Vietnamese Dong,UTC+07:00,VN,113
+Malaysia,Malay,Malaysian Ringgit,UTC+08:00,MY,114
+Cook Islands,English,New Zealand Dollar,UTC-10:00,CK,115
+Eswatini,Swazi,Swazi Lilangeni,UTC+02:00,SZ,116
+Uganda,English,Ugandan Shilling,UTC+03:00,UG,117
+Madagascar,Malagasy,Malagasy Ariary,UTC+03:00,MG,118
+Fiji,English,Fijian Dollar,UTC+12:00,FJ,119
+Norway,Norwegian,Norwegian Krone,UTC+01:00,NO,120
+Antarctica,English,United States Dollar,UTC-03:00,AQ,121
+Bouvet Island,English,United States Dollar,UTC+01:00,BV,122
+Cyprus,Greek,Euro,UTC+02:00,CY,123
+Taiwan,Chinese,New Taiwan Dollar,UTC+08:00,TW,124
+Papua New Guinea,English,Papua New Guinean Kina,UTC+10:00,PG,125
+Rwanda,Kinyarwanda,Rwandan Franc,UTC+02:00,RW,126
+DR Congo,French,Congolese Franc,UTC+01:00,CD,127
+Cameroon,English,Central African CFA franc,UTC+01:00,CM,128
+Serbia,Serbian,Serbian Dinar,UTC+01:00,RS,129
+Lithuania,Lithuanian,Lithuanian Litas,UTC+02:00,LT,130
+French Southern and Antarctic Lands,French,Euro,UTC+05:00,TF,131
+Cambodia,Khmer,Cambodian Riel,UTC+07:00,KH,132
+Saint Helena,English,Saint Helena Pound,UTC+00:00,SH,133
+United Arab Emirates,Arabic,United Arab Emirates Dirham,UTC+04:00,AE,134
+Bermuda,English,Bermudian Dollar,UTC-04:00,BM,135
+Monaco,French,Euro,UTC+01:00,MC,136
+Cuba,Spanish,Cuban Peso,UTC-05:00,CU,137
+Hong Kong,Chinese,Hong Kong Dollar,UTC+08:00,HK,138
+Northern Mariana Islands,English,United States Dollar,UTC+10:00,MP,139
+Togo,French,West African CFA franc,UTC,TG,140
+Luxembourg,Luxembourgish,Euro,UTC+01:00,LU,141
+Mauritius,English,Mauritian Rupee,UTC+04:00,MU,142
+Argentina,Spanish,Argentine Peso,UTC-03:00,AR,143
+Grenada,English,East Caribbean Dollar,UTC-04:00,GD,144
+Nicaragua,Spanish,Nicaraguan Córdoba,UTC-06:00,NI,145
+Niue,English,New Zealand Dollar,UTC-11:00,NU,146
+Ukraine,Ukrainian,Ukrainian Hryvnia,UTC+02:00,UA,147
+Guyana,English,Guyanese Dollar,UTC-04:00,GY,148
+Niger,French,West African CFA franc,UTC+01:00,NE,149
+Benin,French,West African CFA franc,UTC+01:00,BJ,150
+Saint Lucia,English,East Caribbean Dollar,UTC-04:00,LC,151
+Tuvalu,English,Australian Dollar,UTC+12:00,TV,152
+Norfolk Island,English,Australian Dollar,UTC+11:30,NF,153
+Egypt,Arabic,Egyptian Pound,UTC+02:00,EG,154
+Saint Kitts and Nevis,English,East Caribbean Dollar,UTC-04:00,KN,155
+Lesotho,Sesotho,Lesotho Loti,UTC+02:00,LS,156
+Tonga,Tongan,Tongan Pa'anga,UTC+13:00,TO,157
+Georgia,Georgian,Georgian Lari,UTC+04:00,GE,158
+Ethiopia,Amharic,Ethiopian Birr,UTC+03:00,ET,159
+Dominican Republic,Spanish,Dominican Peso,UTC-04:00,DO,160
+Saint Vincent and the Grenadines,English,East Caribbean Dollar,UTC-04:00,VC,161
+Belize,English,Belize Dollar,UTC-06:00,BZ,162
+Isle of Man,English,British Pound,UTC+00:00,IM,163
+Morocco,Arabic,Moroccan Dirham,UTC,MA,164
+Haiti,Creole,French Haitian Gourde,UTC-05:00,HT,165
+Mayotte,French,Euro,UTC+03:00,YT,166
+Burkina Faso,French,West African CFA franc,UTC,BF,167
+Bangladesh,Bengali,Bangladeshi Taka,UTC+06:00,BD,168
+Kuwait,Arabic,Kuwaiti Dinar,UTC+03:00,KW,169
+Réunion,French,Euro,UTC+04:00,RE,170
+Jamaica,English,Jamaican Dollar,UTC-05:00,JM,171
+Romania,Romanian,Romanian Leu,UTC+02:00,RO,172
+São Tomé and Príncipe,Portuguese,São Tomé and Príncipe Dobra,UTC,ST,173
+Bahamas,English,Bahamian Dollar,UTC-05:00,BS,174
+Mexico,Spanish,Mexican Peso,UTC-08:00,MX,175
+Saint Martin,Dutch,Euro,UTC-04:00,MF,176
+El Salvador,Spanish,United States Dollar,UTC-06:00,SV,177
+Saint Barthélemy,French,Euro,UTC-04:00,BL,178
+Micronesia,English,United States Dollar,UTC+10:00,FM,179
+Turkmenistan,Turkmen,Turkmenistan Manat,UTC+05:00,TM,180
+Anguilla,English,Eastern Caribbean Dollar,UTC-04:00,AI,181
+Central African Republic,French,Central African CFA franc,UTC+01:00,CF,182
+Suriname,Dutch,Surinamese Dollar,UTC-03:00,SR,183
+Belgium,Dutch,Euro,UTC+01:00,BE,184
+Sweden,Swedish,Swedish Krona,UTC+01:00,SE,185
+Bolivia,Spanish,Bolivian Boliviano,UTC-04:00,BO,186
+Montenegro,Montenegrin,Euro,UTC+01:00,ME,187
+Mozambique,Portuguese,Mozambican Metical,UTC+02:00,MZ,188
+Latvia,Latvian,Euro,UTC+02:00,LV,189
+Malawi,English,Malawian Kwacha,UTC+02:00,MW,190
+Mali,French,West African CFA franc,UTC,ML,191
+Vatican City,Italian,Euro,UTC+01:00,VA,192
+Montserrat,English,Eastern Caribbean Dollar,UTC-04:00,MS,193
+Austria,German,Euro,UTC+01:00,AT,194
+Albania,Albanian,Albanian lek,UTC+01:00,AL,195
+British Virgin Islands,English,United States Dollar,UTC-04:00,VG,196
+Zambia,English,Zambian Kwacha,UTC+02:00,ZM,197
+French Guiana,French,Euro,UTC-03:00,GF,198
+Liechtenstein,German,Swiss Franc,UTC+01:00,LI,199
+Qatar,Arabic,Qatari Rial,UTC+03:00,QA,200
+Solomon Islands,English,Solomon Islands Dollar,UTC+11:00,SB,201
+Nauru,English,Australian Dollar,UTC+12:00,NR,202
+Greece,Greek,Euro,UTC+02:00,GR,203
+Libya,Arabic,Libyan Dinar,UTC+01:00,LY,204
+Guinea-Bissau,Portuguese,West African CFA franc,UTC,GW,205
+Barbados,English,Barbadian Dollar,UTC-04:00,BB,206
+Honduras,Spanish,Honduran Lempira,UTC-06:00,HN,207
+Somalia,Somali,Somali Shilling,UTC+03:00,SO,208
+Cayman Islands,English,Cayman Islands Dollar,UTC-05:00,KY,209
+Italy,Italian,Euro,UTC+01:00,IT,210
+Wallis and Futuna,French,CFP Franc,UTC+12:00,WF,211
+Andorra,Catalan,Euro,UTC+01:00,AD,212
+Ecuador,Spanish,United States Dollar,UTC-06:00,EC,213
+Kenya,Swahili,Kenyan Shilling,UTC+03:00,KE,214
+Bahrain,Arabic,Bahraini Dinar,UTC+03:00,BH,215
+United Kingdom,English,British Pound,UTC-08:00,GB,216
+Guinea,French,Guinean Franc,UTC,GN,217
+Heard Island and McDonald Islands,English,United States Dollar,UTC+05:00,HM,218
+Russia,Russian,Russian Ruble,UTC+03:00,RU,219
+Brunei,Malay,Brunei Dollar,UTC+08:00,BN,220
+Zimbabwe,English,Zimbabwean Dollar,UTC+02:00,ZW,221
+Guam,English,United States Dollar,UTC+10:00,GU,222
+Australia,English,Australian Dollar,UTC+05:00,AU,223
+Slovenia,Slovenian,Euro,UTC+01:00,SI,224
+Belarus,Belarusian,Belarusian Ruble,UTC+03:00,BY,225
+Thailand,Thai,Thai Baht,UTC+07:00,TH,226
+New Zealand,English,New Zealand Dollar,UTC-11:00,NZ,227
+Tunisia,Arabic,Tunisian Dinar,UTC+01:00,TN,228
+Marshall Islands,English,United States Dollar,UTC+12:00,MH,229
+Sierra Leone,English,Sierra Leonean Leone,UTC,SL,230
+Bhutan,Dzongkha,Bhutanese Ngultrum,UTC+06:00,BT,231
+United States,English,United States Dollar,UTC-12:00,US,232
+Switzerland,German,Swiss Franc,UTC+01:00,CH,233
+Falkland Islands,English,Falkland Islands Pound,UTC-04:00,FK,234
+Cocos (Keeling) Islands,English,Australian Dollar,UTC+06:30,CC,235
+Gabon,French,Central African CFA franc,UTC+01:00,GA,236
+Dominica,English,East Caribbean Dollar,UTC-04:00,DM,237
+Canada,English,Canadian Dollar,UTC-08:00,CA,238
+Trinidad and Tobago,English,Trinidad and Tobago Dollar,UTC-04:00,TT,239
+Puerto Rico,English,United States Dollar,UTC-04:00,PR,240
+Singapore,English,Singapore Dollar,UTC+08:00,SG,241
+Hungary,Hungarian,Hungarian Forint,UTC+01:00,HU,242
+Costa Rica,Spanish,Costa Rican Colón,UTC-06:00,CR,243
+Israel,Hebrew,Israeli New Shekel,UTC+02:00,IL,244
+Bulgaria,Bulgarian,Bulgarian Lev,UTC+02:00,BG,245
+Azerbaijan,Azerbaijani,Azerbaijani Manat,UTC+04:00,AZ,246
+Timor-Leste,Portuguese,United States Dollar,UTC+09:00,TL,247
+Iran,Persian,Iranian Rial,UTC+03:30,IR,248
+Croatia,Croatian,Croatian Kuna,UTC+01:00,HR,249
+Ivory Coast,French,West African CFA franc,UTC,CI,250

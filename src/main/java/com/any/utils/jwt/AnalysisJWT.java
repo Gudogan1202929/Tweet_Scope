@@ -1,8 +1,8 @@
 package com.any.utils.jwt;
 
 import com.any.model.JWT_BL.UserModel;
-import com.any.service.repo.BlackListRepo;
-import com.any.service.repo.Account_repo;
+import com.any.main_logic.repo.BlackListRepo;
+import com.any.main_logic.repo.Account_repo;
 import com.any.utils.constant.SystemConstants;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
