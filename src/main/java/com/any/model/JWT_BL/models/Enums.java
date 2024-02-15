@@ -4,6 +4,23 @@ import lombok.Getter;
 
 public class Enums {
 
+
+    @Getter
+    public enum Role{
+        user(0),
+        admin(1);
+
+        private final int value;
+
+        Role(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+    }
+
     @Getter
     public enum TopicClass {
         Sport(0),
@@ -52,5 +69,9 @@ public class Enums {
             }
             throw new IllegalArgumentException("Invalid integer value for TopicClass: " + value);
         }
+
+
     }
+
+
 }

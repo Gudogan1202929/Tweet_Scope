@@ -1,15 +1,20 @@
 package com.any.model.JWT_BL.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.*;
 
+
+@Entity(name = "Country_Offensive")
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class CountryOffensive {
-    private int countryId;
-    private int normal;
-    private int offensive;
-    private int hateSpeech;
+@NoArgsConstructor
+public class CountryOffensive extends PanacheEntityBase {
+    @Id
+    public int id;
+    public int countryId;
+    public int Normal;
+    public int Offensive;
+    public int Hate_Speech;
 }

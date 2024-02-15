@@ -1,7 +1,10 @@
 package com.any.main_logic.services.Model_services;
 
+import com.any.main_logic.repo.dataseed.DataSeedingInsertion;
 import com.any.model.JWT_BL.models.Enums.*;
 import com.any.model.JWT_BL.models.Tweet;
+import com.any.model.JWT_BL.models.TweetOffensive;
+import com.any.model.JWT_BL.models.TweetTopic;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
@@ -22,6 +25,7 @@ public class TwitterAPIService {
     private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
     private final HateModelService hateModelService;
     private final TopicModelService topicModelService;
+    private final DataSeedingInsertion dataSeedingInsertion = new DataSeedingInsertion();
 
     public TwitterAPIService(HateModelService hateModelService,
                              TopicModelService topicModelService) {
@@ -37,9 +41,9 @@ public class TwitterAPIService {
         }
         TopicClass topicClass = topicModelService.ClassifyText(tweet.getText());
         OffensiveClass offensiveClass = hateModelService.ClassifyText(tweet.getText());
-        //todo insert tweet to database after that get the inserted tweet id
-        //todo insert the offensive and topic class to database
-
+        dataSeedingInsertion.Tweet(tweet);
+        dataSeedingInsertion.tweetOffensive(new TweetOffensive(0,tweet.getId(),offensiveClass));
+        dataSeedingInsertion.tweetTopicObj(new TweetTopic(0,tweet.getId(),topicClass));
     }
     private Tweet withdrawTweets() {
         HttpClient client = HttpClient.newHttpClient();

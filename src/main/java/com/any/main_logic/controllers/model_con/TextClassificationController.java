@@ -2,34 +2,39 @@ package com.any.main_logic.controllers.model_con;
 
 import com.any.main_logic.services.Model_services.HateModelService;
 import com.any.main_logic.services.Model_services.TopicModelService;
+import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
-@RestController
+@Path("/classify")
 public class TextClassificationController {
     private final HateModelService _hateModel = new HateModelService();
     private final TopicModelService _topicModel = new TopicModelService();
 
-    @Path("/classifyHate")
-    public ResponseEntity<?> classifyHate(@RequestParam String text) {
+    @Path("/hate")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response classifyHate(@QueryParam("text") String text) {
         try {
             var hateClass = _hateModel.ClassifyText(text);
-            return ResponseEntity.ok(hateClass);
+            return Response.ok(hateClass).build();
         } catch (Exception ex) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+            return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
         }
     }
 
-    @Path("/classifyTopic")
-    public ResponseEntity<?> classifyTopic(@RequestParam String text) {
+    @Path("/topic")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response classifyTopic(@QueryParam("text") String text) {
         try {
             var topicClass = _topicModel.ClassifyText(text);
-            return ResponseEntity.ok(topicClass);
+            return Response.ok(topicClass).build();
         } catch (Exception ex) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+            return Response.status(Response.Status.BAD_REQUEST).entity(ex.getMessage()).build();
         }
     }
 }

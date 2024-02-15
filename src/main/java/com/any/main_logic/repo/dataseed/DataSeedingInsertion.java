@@ -17,16 +17,14 @@ public class DataSeedingInsertion {
 
     @Transactional
     public void countryInsertion(Country country){
-//        String sql = "INSERT INTO Country (id,name, language,currency,TimeZone) VALUES (?,?, ?,?,?)";
+//        String sql = "INSERT INTO Country (name, language,currency,TimeZone) VALUES (?, ?,?,?)";
 //        try{
 //            Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
 //            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//            preparedStatement.setString(1, String.valueOf(country.getId()));
-//            preparedStatement.setString(2, country.getName());
-//            preparedStatement.setString(3, country.getLanguage());
-//            preparedStatement.setString(4, country.getCurrency());
-//            preparedStatement.setString(5, country.getTimeZone());
-//
+//            preparedStatement.setString(1, country.getName());
+//            preparedStatement.setString(2, country.getLanguage());
+//            preparedStatement.setString(3, country.getCurrency());
+//            preparedStatement.setString(4, country.getTimeZone());
 //            preparedStatement.executeUpdate();
 //        }catch (Exception e) {
 //            e.printStackTrace();
@@ -40,7 +38,7 @@ public class DataSeedingInsertion {
 //            PreparedStatement preparedStatement = connection.prepareStatement(sql);
 //            preparedStatement.setString(1, String.valueOf(countryOffensive.getCountryId()));
 //            preparedStatement.setString(2, String.valueOf(countryOffensive.getOffensive()));
-//            preparedStatement.setString(3, String.valueOf(countryOffensive.getHateSpeech()));
+//            preparedStatement.setString(3, String.valueOf(countryOffensive.getHate_Speech()));
 //            preparedStatement.setString(4, String.valueOf(countryOffensive.getNormal()));
 //            preparedStatement.executeUpdate();
 //        }catch (Exception e) {
@@ -60,36 +58,6 @@ public class DataSeedingInsertion {
 //        }catch (Exception e) {
 //            e.printStackTrace();
 //        }
-    }
-
-    ///all above is done !!!!!!!!!!!!!!!!
-
-    public void tweetOffensive(TweetOffensive tweetOffensive){
-        String sql = "INSERT INTO Tweet_Offensive (TweetId, class) VALUES (?, ?)";
-        try{
-            Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            int offensiveClass = tweetOffensive.getOffensiveClass().getValue();
-            preparedStatement.setString(1, String.valueOf(tweetOffensive.getTweetId()));
-            preparedStatement.setString(2, String.valueOf(offensiveClass));
-            preparedStatement.executeUpdate();
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void tweetTopicObj(TweetTopic tweetTopic){
-        String sql = "INSERT INTO Tweet_Topic (TweetId, topic) VALUES (?, ?)";
-        try{
-            Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            int topicClass = tweetTopic.getTopic().getValue();
-            preparedStatement.setString(1, String.valueOf(tweetTopic.getTweetId()));
-            preparedStatement.setString(2, String.valueOf(topicClass));
-            preparedStatement.executeUpdate();
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public void summary(DateOffensive dateOffensive){
@@ -130,8 +98,37 @@ public class DataSeedingInsertion {
 //            preparedStatement.setString(2, String.valueOf(topicSummary.getPolitics()));
 //            preparedStatement.setString(3, String.valueOf(topicSummary.getSport()));
 //            preparedStatement.setString(4, String.valueOf(topicSummary.getTechnology()));
-//            preparedStatement.setString(4, String.valueOf(topicSummary.getReligion()));
+//            preparedStatement.setString(5, String.valueOf(topicSummary.getReligion()));
 //
+//            preparedStatement.executeUpdate();
+//        }catch (Exception e) {
+//            e.printStackTrace();
+//        }
+    }
+
+
+    public void tweetOffensive(TweetOffensive tweetOffensive){
+//        String sql = "INSERT INTO Tweet_Offensive (TweetId, Class) VALUES (?, ?)";
+//        try{
+//            Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
+//            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+//            int offensiveClass = tweetOffensive.getOffensiveClass().getValue();
+//            preparedStatement.setString(1, String.valueOf(tweetOffensive.getTweetId()));
+//            preparedStatement.setString(2, String.valueOf(offensiveClass));
+//            preparedStatement.executeUpdate();
+//        }catch (Exception e) {
+//            e.printStackTrace();
+//        }
+    }
+
+    public void tweetTopicObj(TweetTopic tweetTopic){
+//        String sql = "INSERT INTO Tweet_Topic (TweetId, topic) VALUES (?, ?)";
+//        try{
+//            Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
+//            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+//            int topicClass = tweetTopic.getTopic().getValue();
+//            preparedStatement.setString(1, String.valueOf(tweetTopic.getTweetId()));
+//            preparedStatement.setString(2, String.valueOf(topicClass));
 //            preparedStatement.executeUpdate();
 //        }catch (Exception e) {
 //            e.printStackTrace();

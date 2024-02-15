@@ -63,7 +63,7 @@ public class SeedData {
                 int id = Integer.parseInt(data[5]);
                 Country country = new Country(id, data[0], data[1], data[2], data[4]);
                 dataSeedingInsertion.countryInsertion(country);
-                CountryOffensive countryOffensive = new CountryOffensive(id, 0, 0, 0);
+                CountryOffensive countryOffensive = new CountryOffensive(0,id, 0, 0, 0);
                 dataSeedingInsertion.countryOffensive(countryOffensive);
                 System.out.println(country.getId());
             }
@@ -122,7 +122,7 @@ public class SeedData {
                     default:
                         throw new IllegalArgumentException("Invalid tweet class: " + tweetClass);
                 }
-                TweetOffensive tweetOffensive = new TweetOffensive(tweetId, offensiveClass);
+                TweetOffensive tweetOffensive = new TweetOffensive(0,tweetId, offensiveClass);
                 dataSeedingInsertion.tweetOffensive(tweetOffensive);
                 System.out.println(tweetOffensive.getTweetId());
             }
@@ -162,7 +162,7 @@ public class SeedData {
                     default:
                         throw new IllegalArgumentException("Invalid topic: " + topic);
                 }
-                TweetTopic tweetTopicObj = new TweetTopic(tweetId, tweetTopic);
+                TweetTopic tweetTopicObj = new TweetTopic(0,tweetId, tweetTopic);
                 dataSeedingInsertion.tweetTopicObj(tweetTopicObj);
                 System.out.println(tweetTopicObj.getTweetId());
             }
@@ -173,18 +173,18 @@ public class SeedData {
 
     private static void seedDate() {
         LocalDate date = LocalDate.of(2015, 1, 1);
-        LocalDate last = LocalDate.now();
-        while (date.compareTo(last) <= 0) {
-            DateOffensive summary = new DateOffensive(date, 0, 0, 0);
+        LocalDate last = LocalDate.of(2024,2,15);
+        while (!date.isAfter(last)) {
+            DateOffensive summary = new DateOffensive(0,date, 0, 0, 0);
             dataSeedingInsertion.summary(summary);
             date = date.plusDays(1);
         }
     }
 
     private static void seedSummaries() {
-        var offensiveSummary = new OffensiveSummary(0, 0, 0);
+        var offensiveSummary = new OffensiveSummary(0,0, 0, 0);
         dataSeedingInsertion.offensiveSummary(offensiveSummary);
-        var topicSummary = new TopicSummary(0,0,0,0,0);
+        var topicSummary = new TopicSummary(0,0,0,0,0,0);
         dataSeedingInsertion.topicSummary(topicSummary);
     }
 

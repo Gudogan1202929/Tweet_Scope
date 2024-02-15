@@ -70,74 +70,74 @@ public class FilterMethods {
     }
 
     public static void filter(ContainerRequestContext containerRequestContext, ContainerResponseContext containerResponseContext) throws IOException {
-        int statusCode = containerResponseContext.getStatus();
-
-        String message;
-
-        switch (statusCode) {
-            case 200:
-                message = SystemConstants.OK;
-                break;
-            case 201:
-                message = SystemConstants.CREATED;
-                break;
-            case 204:
-                message = SystemConstants.NO_CONTENT;
-                break;
-            case 400:
-                message = SystemConstants.BAD_REQUEST;
-                break;
-            case 401:
-                message = SystemConstants.UNAUTHORIZED;
-                break;
-            case 403:
-                message = SystemConstants.FORBIDDEN;
-                break;
-            case 404:
-                message = SystemConstants.NOT_FOUND;
-                break;
-            case 405:
-                message = SystemConstants.METHOD_NOT_ALLOWED;
-                break;
-            case 406:
-                message = SystemConstants.NOT_ACCEPTABLE_MASSAGE;
-                break;
-            case 409:
-                message = SystemConstants.CONFLICT;
-                break;
-            case 415:
-                message = SystemConstants.UNSUPPORTED_MEDIA;
-                break;
-            case 500:
-                message = SystemConstants.INTERNAL_SERVER_ERROR;
-                break;
-            case 503:
-                message = SystemConstants.SERVER_UNAVAILABLE;
-                break;
-            case 504:
-                message = SystemConstants.GATEWAY_TIMEOUT;
-                break;
-            case 505:
-                message = SystemConstants.HTTP_VERSION_NOT_SUPPORT;
-                break;
-            case 507:
-                message = SystemConstants.INSUFFICIENT_STORAGE;
-                break;
-            default:
-                message = SystemConstants.UNKNOWN_STATUS_CODE + statusCode;
-                break;
-        }
-
-        String entity = "";
-        if ((statusCode == 200 || statusCode == 201 || statusCode == 202)) {
-        }else{
-            try {
-                entity = containerResponseContext.getEntity().toString();
-                containerResponseContext.setEntity(statusCode + " : " + message + "\n" + entity);
-            }catch (Exception e){
-                containerResponseContext.setEntity(statusCode + " : " + message + "\n" + entity);
-            }
-        }
+//        int statusCode = containerResponseContext.getStatus();
+//
+//        String message;
+//
+//        switch (statusCode) {
+//            case 200:
+//                message = SystemConstants.OK;
+//                break;
+//            case 201:
+//                message = SystemConstants.CREATED;
+//                break;
+//            case 204:
+//                message = SystemConstants.NO_CONTENT;
+//                break;
+//            case 400:
+//                message = SystemConstants.BAD_REQUEST;
+//                break;
+//            case 401:
+//                message = SystemConstants.UNAUTHORIZED;
+//                break;
+//            case 403:
+//                message = SystemConstants.FORBIDDEN;
+//                break;
+//            case 404:
+//                message = SystemConstants.NOT_FOUND;
+//                break;
+//            case 405:
+//                message = SystemConstants.METHOD_NOT_ALLOWED;
+//                break;
+//            case 406:
+//                message = SystemConstants.NOT_ACCEPTABLE_MASSAGE;
+//                break;
+//            case 409:
+//                message = SystemConstants.CONFLICT;
+//                break;
+//            case 415:
+//                message = SystemConstants.UNSUPPORTED_MEDIA;
+//                break;
+//            case 500:
+//                message = SystemConstants.INTERNAL_SERVER_ERROR;
+//                break;
+//            case 503:
+//                message = SystemConstants.SERVER_UNAVAILABLE;
+//                break;
+//            case 504:
+//                message = SystemConstants.GATEWAY_TIMEOUT;
+//                break;
+//            case 505:
+//                message = SystemConstants.HTTP_VERSION_NOT_SUPPORT;
+//                break;
+//            case 507:
+//                message = SystemConstants.INSUFFICIENT_STORAGE;
+//                break;
+//            default:
+//                message = SystemConstants.UNKNOWN_STATUS_CODE + statusCode;
+//                break;
+//        }
+//
+//        String entity = "";
+//        if ((statusCode == 200 || statusCode == 201 || statusCode == 202)) {
+//        }else{
+//            try {
+//                entity = containerResponseContext.getEntity().toString();
+//                containerResponseContext.setEntity(statusCode + " : " + message + "\n" + entity);
+//            }catch (Exception e){
+//                containerResponseContext.setEntity(statusCode + " : " + message + "\n" + entity);
+//            }
+//        }
 
     }
 }
