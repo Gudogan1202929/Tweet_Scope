@@ -10,8 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Account_controller {
-
-     private final Account_repo accountRepo = new Account_repo();
+    private final Account_repo accountRepo = new Account_repo();
     @Transactional
     public boolean login(UserModel userModel) throws Exception {
         try {

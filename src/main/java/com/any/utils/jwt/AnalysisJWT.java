@@ -1,5 +1,6 @@
 package com.any.utils.jwt;
 
+import com.any.main_logic.repo.BlackListNative;
 import com.any.model.JWT_BL.UserModel;
 import com.any.main_logic.repo.BlackListRepo;
 import com.any.main_logic.repo.Account_repo;
@@ -13,6 +14,7 @@ public class AnalysisJWT {
 
     private static final Account_repo userRepo = new Account_repo();
     public static final BlackListRepo blackListRepo = new BlackListRepo();
+    public static final BlackListNative blackListNative = new BlackListNative();
 
     public static boolean CheckJWTIfForUser(String jwt) {
         try {
@@ -22,7 +24,7 @@ public class AnalysisJWT {
 
             UserModel userModelFromDataBase =  userRepo.findByUsername(decodedJWT.getSubject());
 
-            if (!decodedJWT.getSubject().equals(userModelFromDataBase.getUsername()) || !blackListRepo.findByToken(jwt)
+            if (!decodedJWT.getSubject().equals(userModelFromDataBase.getUsername())
                     || !jwt.equals(userModelFromDataBase.getToken())){
                 return false;
             }

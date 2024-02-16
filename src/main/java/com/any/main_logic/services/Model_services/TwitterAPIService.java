@@ -7,6 +7,8 @@ import com.any.model.JWT_BL.models.TweetOffensive;
 import com.any.model.JWT_BL.models.TweetTopic;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.inject.Inject;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -15,25 +17,23 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.LocalDateTime;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 @Service
 public class TwitterAPIService {
-
-    private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
     private final HateModelService hateModelService;
     private final TopicModelService topicModelService;
     private final DataSeedingInsertion dataSeedingInsertion = new DataSeedingInsertion();
 
+    @Inject
     public TwitterAPIService(HateModelService hateModelService,
                              TopicModelService topicModelService) {
         this.topicModelService = topicModelService;
         this.hateModelService = hateModelService;
-        scheduler.scheduleAtFixedRate(this::withdrawAndClassifyTweets, 0, 5, TimeUnit.SECONDS);
     }
 
+    // Define the method to be executed at fixed intervals
+    @Scheduled(cron = "15s")
     private void withdrawAndClassifyTweets(){
         Tweet tweet = withdrawTweets();
         if(tweet == null){
@@ -45,6 +45,7 @@ public class TwitterAPIService {
         dataSeedingInsertion.tweetOffensive(new TweetOffensive(0,tweet.getId(),offensiveClass));
         dataSeedingInsertion.tweetTopicObj(new TweetTopic(0,tweet.getId(),topicClass));
     }
+
     private Tweet withdrawTweets() {
         HttpClient client = HttpClient.newHttpClient();
         String topicEndpoint = "http://localhost:5000/predict/";

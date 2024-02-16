@@ -17,7 +17,6 @@ public class Filter implements ContainerRequestFilter, ContainerResponseFilter {
     @Transactional
     @Override
     public void filter(ContainerRequestContext containerRequestContext){
-        System.out.println("Filtering request");
         FilterMethods.filter(containerRequestContext);
     }
 
